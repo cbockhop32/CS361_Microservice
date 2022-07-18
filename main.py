@@ -1,11 +1,10 @@
 from http.server import BaseHTTPRequestHandler, HTTPServer
-import socketserver
-import json
-import cgi
-from typing import final
-import simplejson
 from bs4 import BeautifulSoup
+
+import json
+import simplejson
 import requests
+
 
 
 class Server(BaseHTTPRequestHandler):
@@ -33,13 +32,9 @@ class Server(BaseHTTPRequestHandler):
         # This is the url that was received from the POST request
         received_data = simplejson.loads(self.data_string)
    
-
-
         # Wikiscraping
         html_text = requests.get(received_data['url']).text
-
         soup = BeautifulSoup(html_text, 'lxml')
-
         external_link = soup.find('span', id="External_links").parent.find_next_sibling('ul').find('a', class_='external text')
 
 
