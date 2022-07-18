@@ -25,4 +25,4 @@
 
  ## UML Diagram for Microservice Communication 
 
- ![Alt text](uml_diagram.png?raw=true "Title")
+ ![Alt text](uml_diagram2.png?raw=true "Title")
