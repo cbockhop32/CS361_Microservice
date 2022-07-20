@@ -21,6 +21,7 @@
  The data will be received through a response from the POST reqeuest that was sent to the microservice that contains a JSON string. It will contain the key "url" with a URL to an external link that was obtained from the Wikipedia page's 'External Link' section as the value. 
 
  The receiver will be able to access the URL within the JSON string by converting it to an object and then accessing the value by using the key 'url'.
+ 
 
 
  ## UML Diagram for Microservice Communication 
