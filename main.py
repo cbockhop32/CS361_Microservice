@@ -17,9 +17,9 @@ class Server(BaseHTTPRequestHandler):
         self._set_headers()
         
     # GET sends back a Hello world message
-    def do_GET(self):
-        self._set_headers()
-        self.wfile.write(json.dumps({'hello': 'world', 'received': 'ok'}).encode('utf-8'))  
+    # def do_GET(self):
+    #     self._set_headers()
+    #     self.wfile.write(json.dumps({'hello': 'world', 'received': 'ok'}).encode('utf-8'))  
         
     # POST echoes the message adding a JSON field
     def do_POST(self):
